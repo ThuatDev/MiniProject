@@ -11,10 +11,10 @@ const App = () => {
         test link
         <div>
           <button>
-            <Link to="/admins">Admin</Link>
+            <Link to="/admin">Admin</Link>
           </button>
           <button>
-            <Link to="/users">User</Link>
+            <Link to="/user">User</Link>
           </button>
         </div>
       </div>
