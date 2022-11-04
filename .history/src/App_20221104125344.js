@@ -11,8 +11,18 @@ const App = () => {
       </div>
       <div className="main-container">
         <div className="sidenav-container"></div>
-        <div className="app-content">
-          <Outlet />
+        <div className="app-content"></div>
+      </div>
+
+      <div>
+        test link
+        <div>
+          <button>
+            <Link to="/admins">Admin</Link>
+          </button>
+          <button>
+            <Link to="/users">User</Link>
+          </button>
         </div>
       </div>
     </div>
