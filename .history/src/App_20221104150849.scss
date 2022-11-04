@@ -8,14 +8,18 @@ body {
 }
 .app-container {
   .header-container {
-    .navbar {
-      z-index: 10;
-      opacity: 0.6;
+    .navbar-nav {
+      // z-index: 10;
+      // opacity: 0.6;
       .nav-link {
+        color: rgb(0, 0, 0);
         &.active {
-          color: rgb(22, 162, 255);
+          color: #0ec2f4;
         }
       }
+      // .navbar-nav .nav-link.active {
+      //   color: rgb(145, 52, 252);
+      // }
     }
   }
 }

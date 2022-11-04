@@ -1,4 +1,4 @@
-import videoHomePage from "../../assets/video-homepage.mp4";
+import videoHomePage from "../../assets/videos/video-homepage.mp4";
 const HomePage = (props) => {
   return (
     <div clasName="homepage-container">
