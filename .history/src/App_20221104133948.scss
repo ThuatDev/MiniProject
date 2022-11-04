@@ -9,14 +9,13 @@ body {
 .app-container {
   .header-container {
     .navbar-nav {
-      .nav-link {
-        &.active {
-          color: #0ec2f4;
-        }
+    .nav-link{
+      &.active {
+        color: #61dafb;
       }
-      // .navbar-nav .nav-link.active {
-      //   color: rgb(145, 52, 252);
-      // }
     }
+    // .navbar-nav .nav-link.active {
+    //   color: rgb(145, 52, 252);
+    // }
   }
 }
