@@ -10,7 +10,7 @@ const Header = () => {
       <Container>
         {/* <Navbar.Brand href="">THUAT DEV</Navbar.Brand> */}
         <NavLink to="/" className="navbar-brand">
-          THUAT DEV
+          Home
         </NavLink>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -27,9 +27,9 @@ const Header = () => {
           </Nav>
           <Nav>
             <NavDropdown title="Settings" id="basic-nav-dropdown">
-              <NavDropdown.Item>Login</NavDropdown.Item>
-              <NavDropdown.Item>Log out</NavDropdown.Item>
-              <NavDropdown.Item>Profile</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">Login</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Log out</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">Profile</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
