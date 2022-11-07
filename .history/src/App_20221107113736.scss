@@ -68,41 +68,28 @@ body {
         font-size: 22px;
       }
       .title-3 {
-        font-size: 18px;
-        background-color: #000;
-        border: 1px solid #000;
-        border-radius: 5px;
-        padding: 10px 13px;
-        // margin: 0 10px;
-        color: #fff;
-        cursor: pointer;
-        &:hover {
-          background-color: rgb(59, 58, 58);
-          color: rgb(255, 255, 255);
+        button {
+          background-color: #000;
+          border: 1px solid #000;
+          border-radius: 5px;
+          padding: 5px 13px;
+          margin: 0 10px;
+          color: #fff;
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(59, 58, 58);
+            color: rgb(255, 255, 255);
+          }
         }
       }
     }
   }
 }
 video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  // width: 100%;
+  // height: 100%;
+  // object-fit: cover;
   position: fixed;
   bottom: 0;
   width: 100vw;
 }
-// video {
-//   display: block;
-//   position: relative;
-//   width: 100%;
-//   z-index: 1;
-//   background-size: cover;
-//   background-position: center;
-//   transition: 1s opacity;
-// }
-// .homepage-container {
-//   // height: calc(59.2708vw);
-//   margin-top: -98px;
-//   position: fixed;
-// }
