@@ -1,0 +1,27 @@
+.admin-container {
+  display: flex;
+  .admin-sidebar {
+    height: 100vh !important;
+  }
+  .admin-content {
+    width: 100%;
+    .admin-navbar {
+      padding-top: 20px;
+      z-index: 10;
+      background-color: rgb(0, 0, 0, 0) !important;
+      .nav-link {
+        &.active {
+          color: rgb(22, 162, 255);
+        }
+      }
+    }
+  }
+    .admin-header {
+      height: 40px;
+      border: 1px solid green;
+    }
+    .admin-main {
+      border: 1px solid red;
+    }
+  }
+}
