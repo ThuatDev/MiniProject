@@ -20,10 +20,7 @@ const ManageUser = () => {
           </button>
         </div>
         <div className="table-users-container">Table Users</div>
-        <ModalCreateUser
-          show={showModalCreateUser}
-          setShow={setShowModalCreateUser}
-        />
+        <ModalCreateUser show={showModalCreateUser} />
       </div>
     </div>
   );

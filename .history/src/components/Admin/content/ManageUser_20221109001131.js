@@ -11,19 +11,13 @@ const ManageUser = () => {
       <div className="users-content">
         {/* <div className="btn-add-new"></div> */}
         <div clasName="btn-add-new">
-          <button
-            className="btn btn-primary"
-            onClick={() => setShowModalCreateUser(true)}
-          >
+          <button className="btn btn-primary">
             <FcPlus />
             Add New Users
           </button>
         </div>
         <div className="table-users-container">Table Users</div>
-        <ModalCreateUser
-          show={showModalCreateUser}
-          setShow={setShowModalCreateUser}
-        />
+        <ModalCreateUser show={showModalCreateUser} />
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ const ModalCreateUser = (props) => {
     setShow(false);
     setEmail("");
     setPassword("");
-    setRole("USER");
+    setRole("");
     setPreviewImage("");
     setUserName("");
   };
@@ -67,7 +67,7 @@ const ModalCreateUser = (props) => {
 
       <Modal
         show={show}
-        f
+        onHide={handleClose}
         size="xl"
         backdrop="static"
         className="modal-add-user"

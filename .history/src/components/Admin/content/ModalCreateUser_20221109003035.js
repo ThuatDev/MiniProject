@@ -3,23 +3,15 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./ManageUser.scss";
 import { FcPlus } from "react-icons/fc";
-import axios from "axios";
 
 const ModalCreateUser = (props) => {
   const { show, setShow } = props;
 
-  const handleClose = () => {
-    setShow(false);
-    setEmail("");
-    setPassword("");
-    setRole("USER");
-    setPreviewImage("");
-    setUserName("");
-  };
+  const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUserName] = useState("");
+  const [username, setuserName] = useState("");
   const [role, setRole] = useState("User");
   const [image, setImage] = useState("");
   const [previewImage, setPreviewImage] = useState("");
@@ -37,28 +29,7 @@ const ModalCreateUser = (props) => {
       // setPreviewImage("");
     }
   };
-  const handleSubmitCreatUser = async () => {
-    // let data = {
-    //   email: email,
-    //   password: password,
-    //   username: username,
-    //   role: role,
-    //   userImage: image,
-    // };
-    // console.log("data", data);
-    const data = new FormData();
-    data.append("email", email);
-    data.append("password", password);
-    data.append("username", username);
-    data.append("role", role);
-    data.append("userImage", image);
-
-    let res = await axios.post(
-      "http://localhost:8081/api/v1/participant",
-      data
-    );
-    console.log("res", res);
-  };
+  const handleSubmitCreatUser = () => {};
   return (
     <>
       {/* <Button variant="primary" onClick={handleShow}>
@@ -67,7 +38,7 @@ const ModalCreateUser = (props) => {
 
       <Modal
         show={show}
-        f
+        onHide={handleClose}
         size="xl"
         backdrop="static"
         className="modal-add-user"
@@ -92,7 +63,7 @@ const ModalCreateUser = (props) => {
                 type="password"
                 className="form-control"
                 value={password}
-                onChange={(event) => setPassword(event.target.value)}
+                onchange={(event) => setPassword(event.target.value)}
               />
             </div>
 
@@ -102,14 +73,14 @@ const ModalCreateUser = (props) => {
                 type="text"
                 className="form-control"
                 value={username}
-                onChange={(event) => setUserName(event.target.value)}
+                onchange={(event) => setuserName(event.target.value)}
               />
             </div>
             <div className="col-md-4">
               <label className="form-label">Role</label>
               <select
                 className="form-select "
-                onChange={(event) => setRole(event.target.value)}
+                onchange={(event) => setRole(event.target.value)}
               >
                 <option value="USER">USERS</option>
                 <option value="ADMIN">ADMIN</option>

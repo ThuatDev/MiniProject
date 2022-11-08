@@ -24,6 +24,7 @@ const ManageUser = () => {
           show={showModalCreateUser}
           setShow={setShowModalCreateUser}
         />
+        />
       </div>
     </div>
   );
