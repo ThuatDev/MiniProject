@@ -75,9 +75,6 @@ const ModalCreateUser = (props) => {
       handleClose();
       console.log("res", res.data);
     }
-    if (res.data && res.data.EC !== 0) {
-      toast.error(res.data.EM);
-    }
   };
   return (
     <>

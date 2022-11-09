@@ -69,14 +69,12 @@ const ModalCreateUser = (props) => {
       "http://localhost:8081/api/v1/participant",
       data
     );
+    console.log("res", res.data);
 
-    if (res.data && res.data.EC === 0) {
+    if (res.data && res.data.Ec === 0) {
       toast.success(res.data.EM);
       handleClose();
       console.log("res", res.data);
-    }
-    if (res.data && res.data.EC !== 0) {
-      toast.error(res.data.EM);
     }
   };
   return (

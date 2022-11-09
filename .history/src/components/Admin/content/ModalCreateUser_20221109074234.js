@@ -25,6 +25,7 @@ const ModalCreateUser = (props) => {
   const [image, setImage] = useState("");
   const [previewImage, setPreviewImage] = useState("");
 
+  // const [role,setRole]=useState("");
   const handleUploadImage = (event) => {
     console.log("upload image, event.target.files[0]", event.target.files[0]);
     // setImage(event.target.files[0]);
@@ -48,15 +49,9 @@ const ModalCreateUser = (props) => {
     // validateEmail
     const isValidEmail = validateEmail(email);
     if (!isValidEmail) {
-      toast.error("Email is not valid");
+      alert("Email is not valid");
       return;
     }
-    // validate password
-    if (!password || password.length < 6) {
-      toast.error("Password is not valid");
-      return;
-    }
-
     // submitdata
     const data = new FormData();
     data.append("email", email);
@@ -69,15 +64,7 @@ const ModalCreateUser = (props) => {
       "http://localhost:8081/api/v1/participant",
       data
     );
-
-    if (res.data && res.data.EC === 0) {
-      toast.success(res.data.EM);
-      handleClose();
-      console.log("res", res.data);
-    }
-    if (res.data && res.data.EC !== 0) {
-      toast.error(res.data.EM);
-    }
+    console.log("res", res);
   };
   return (
     <>
