@@ -53,10 +53,10 @@ const ModalCreateUser = (props) => {
     //   return;
     // }
     // validate password
-    // if (!password || password.length < 6) {
-    //   toast.error("Password is not valid");
-    //   return;
-    // }
+    if (!password || password.length < 6) {
+      toast.error("Password is not valid");
+      return;
+    }
 
     // submitdata
 

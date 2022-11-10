@@ -45,18 +45,19 @@ const ModalCreateUser = (props) => {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
   };
-  const handleSubmitCreatUser = async () => {
-    // validateEmail
-    // const isValidEmail = validateEmail(email);
-    // if (!isValidEmail) {
-    //   toast.error("Email is not valid");
-    //   return;
-    // }
+  // const handleSubmitCreatUser = async () => {
+  //   // validateEmail
+  //   const isValidEmail = validateEmail(email);
+  //   if (!isValidEmail) {
+  //     toast.error("Email is not valid");
+  //     return;
+  //   }
+
     // validate password
-    // if (!password || password.length < 6) {
-    //   toast.error("Password is not valid");
-    //   return;
-    // }
+    if (!password || password.length < 6) {
+      toast.error("Password is not valid");
+      return;
+    }
 
     // submitdata
 

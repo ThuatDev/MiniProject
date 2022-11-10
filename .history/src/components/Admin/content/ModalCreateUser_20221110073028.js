@@ -47,16 +47,16 @@ const ModalCreateUser = (props) => {
   };
   const handleSubmitCreatUser = async () => {
     // validateEmail
-    // const isValidEmail = validateEmail(email);
-    // if (!isValidEmail) {
-    //   toast.error("Email is not valid");
-    //   return;
-    // }
+    const isValidEmail = validateEmail(email);
+    if (!isValidEmail) {
+      toast.error("Email is not valid");
+      return;
+    }
     // validate password
-    // if (!password || password.length < 6) {
-    //   toast.error("Password is not valid");
-    //   return;
-    // }
+    if (!password || password.length < 6) {
+      toast.error("Password is not valid");
+      return;
+    }
 
     // submitdata
 

@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./ManageUser.scss";
 import { FcPlus } from "react-icons/fc";
-
+import axios from "axios";
 import { toast } from "react-toastify";
 import { postCreateNewUser } from "../../../services/apiServices";
 
@@ -47,29 +47,30 @@ const ModalCreateUser = (props) => {
   };
   const handleSubmitCreatUser = async () => {
     // validateEmail
-    // const isValidEmail = validateEmail(email);
-    // if (!isValidEmail) {
-    //   toast.error("Email is not valid");
-    //   return;
-    // }
+    const isValidEmail = validateEmail(email);
+    if (!isValidEmail) {
+      toast.error("Email is not valid");
+      return;
+    }
     // validate password
-    // if (!password || password.length < 6) {
-    //   toast.error("Password is not valid");
-    //   return;
-    // }
+    if (!password || password.length < 6) {
+      toast.error("Password is not valid");
+      return;
+    }
 
     // submitdata
 
-    let data = await postCreateNewUser(email, password, username, role, image);
-    console.log("component", data);
-    if (data && data.EC === 0) {
-      toast.success(data.EM);
+
+    let res = await
+
+    if (res.data && res.data.EC === 0) {
+      toast.success(res.data.EM);
       handleClose();
-      console.log("res", data);
+      console.log("res", res.data);
     }
-    if (data && data.EC !== 0) {
-      toast.error(data.EM);
-      console.log("res", data);
+    if (res.data && res.data.EC !== 0) {
+      toast.error(res.data.EM);
+      console.log("res", res.data);
     }
   };
   return (
