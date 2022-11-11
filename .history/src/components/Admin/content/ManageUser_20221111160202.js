@@ -26,18 +26,14 @@ const ManageUser = () => {
   const handleClickBtnUpdateUser = (user) => {
     setShowModalUpdateUser(true);
     setDataUpdate(user);
-
     console.log("user", user);
-  };
-  const resetUpdateData = () => {
-    setDataUpdate({});
   };
   return (
     <div className="manage-user-container">
       <div className="title">Manage User</div>
       <div className="users-content">
         {/* <div className="btn-add-new"></div> */}
-        <div className="btn-add-new">
+        <div clasName="btn-add-new">
           <button
             className="btn btn-primary"
             onClick={() => setShowModalCreateUser(true)}
@@ -62,7 +58,6 @@ const ManageUser = () => {
           setShow={setShowModalUpdateUser}
           dataUpdate={dataUpdate}
           fetchListUsers={fetchListUsers}
-          resetUpdateData={resetUpdateData}
         />
       </div>
     </div>

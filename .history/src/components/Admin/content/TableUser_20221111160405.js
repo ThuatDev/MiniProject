@@ -39,7 +39,7 @@ const TableUser = (props) => {
           {listUsers.length === 0 && (
             <tr>
               <td colSpan="5" className="text-center">
-                not found data
+                No data
               </td>
             </tr>
           )}

@@ -15,9 +15,9 @@ const ModalUpdateUser = (props) => {
     setShow(false);
     setEmail("");
     setPassword("");
+
     setPreviewImage("");
     setUserName("");
-    props.resetUpdateData();
   };
   // const handleShow = () => setShow(true);
   const [email, setEmail] = useState("");
@@ -73,7 +73,7 @@ const ModalUpdateUser = (props) => {
 
     // submitdata
 
-    let data = await putUpdateUser(dataUpdate.id, username, role, image);
+    let data = await postCreateNewUser(email, password, username, role, image);
     console.log("component", data);
     if (data && data.EC === 0) {
       toast.success(data.EM);
