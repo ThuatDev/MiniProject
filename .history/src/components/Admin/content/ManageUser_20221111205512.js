@@ -13,7 +13,6 @@ const ManageUser = () => {
   const [showModalUpdateUser, setShowModalUpdateUser] = useState(false);
   const [dataUpdate, setDataUpdate] = useState({});
   const [showModalDeleteUser, setShowModalDeleteUser] = useState(false);
-  const [dataDelete, setDataDelete] = useState({});
   const [listUsers, setListUsers] = useState([]);
 
   useEffect(() => {
@@ -35,16 +34,6 @@ const ManageUser = () => {
   const resetUpdateData = () => {
     setDataUpdate({});
   };
-  // deleteUser
-  const handleClickBtnDeleteUser = (user) => {
-    console.log("user", user);
-    setShowModalDeleteUser(true);
-    setDataDelete(user);
-  };
-  const resetDeleteData = () => {
-    setDataUpdate({});
-  };
-
   return (
     <div className="manage-user-container">
       <div className="title">Manage User</div>
@@ -63,7 +52,6 @@ const ManageUser = () => {
           <TableUser
             listUsers={listUsers}
             handleClickBtnUpdateUser={handleClickBtnUpdateUser}
-            handleClickBtnDeleteUser={handleClickBtnDeleteUser}
           />
         </div>
         <ModalCreateUser
@@ -81,7 +69,7 @@ const ManageUser = () => {
         <ModalDeleteUser
           show={showModalDeleteUser}
           setShow={setShowModalDeleteUser}
-          dataDelete={dataDelete}
+          handleClickBtnUpdateUser={handleClickBtnUpdateUser}
         />
       </div>
     </div>

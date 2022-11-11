@@ -39,7 +39,7 @@ const ManageUser = () => {
   const handleClickBtnDeleteUser = (user) => {
     console.log("user", user);
     setShowModalDeleteUser(true);
-    setDataDelete(user);
+    setDataUpdate(user);
   };
   const resetDeleteData = () => {
     setDataUpdate({});
