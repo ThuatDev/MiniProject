@@ -81,7 +81,7 @@ const ModalCreateUser = (props) => {
 
       <Modal
         show={show}
-        onHide={handleClose}
+        f
         size="xl"
         backdrop="static"
         className="modal-add-user"

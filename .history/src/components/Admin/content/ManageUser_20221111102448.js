@@ -10,7 +10,6 @@ import ModalUpdateUser from "./ModalUpdateUser";
 const ManageUser = () => {
   const [showModalCreateUser, setShowModalCreateUser] = useState(false);
   const [showModalUpdateUser, setShowModalUpdateUser] = useState(false);
-  const [dataUpdate, setDataUpdate] = useState({});
   const [listUsers, setListUsers] = useState([]);
 
   useEffect(() => {
@@ -25,8 +24,6 @@ const ManageUser = () => {
   };
   const handleClickBtnUpdateUser = (user) => {
     setShowModalUpdateUser(true);
-    setDataUpdate(user);
-    console.log("user", user);
   };
   return (
     <div className="manage-user-container">
@@ -55,8 +52,7 @@ const ManageUser = () => {
         />
         <ModalUpdateUser
           show={showModalUpdateUser}
-          setShow={setShowModalUpdateUser}
-          dataUpdate={dataUpdate}
+          setShow={setShowModalCreateUser}
         />
       </div>
     </div>

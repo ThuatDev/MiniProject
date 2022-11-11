@@ -25,7 +25,6 @@ const ManageUser = () => {
   };
   const handleClickBtnUpdateUser = (user) => {
     setShowModalUpdateUser(true);
-    setDataUpdate(user);
     console.log("user", user);
   };
   return (
@@ -56,7 +55,6 @@ const ManageUser = () => {
         <ModalUpdateUser
           show={showModalUpdateUser}
           setShow={setShowModalUpdateUser}
-          dataUpdate={dataUpdate}
         />
       </div>
     </div>
