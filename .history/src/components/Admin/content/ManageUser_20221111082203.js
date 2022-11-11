@@ -41,7 +41,6 @@ const ManageUser = () => {
         <ModalCreateUser
           show={showModalCreateUser}
           setShow={setShowModalCreateUser}
-          fetchListUsers={fetchListUsers}
         />
       </div>
     </div>

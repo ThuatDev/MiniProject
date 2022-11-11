@@ -3,13 +3,12 @@ import "./ManageUser.scss";
 import { FcPlus } from "react-icons/fc";
 
 import TableUser from "./TableUser";
-import { useState, useEffect } from "react";
+import { useState, userEffect } from "react";
 import { getAllUsers } from "../../../services/apiServices";
 
 const ManageUser = () => {
   const [showModalCreateUser, setShowModalCreateUser] = useState(false);
   const [listUsers, setListUsers] = useState([]);
-
   useEffect(() => {
     fetchListUsers();
   }, []);
@@ -36,12 +35,11 @@ const ManageUser = () => {
           </button>
         </div>
         <div className="table-users-container">
-          <TableUser listUsers={listUsers} />
+          <TableUser />
         </div>
         <ModalCreateUser
           show={showModalCreateUser}
           setShow={setShowModalCreateUser}
-          fetchListUsers={fetchListUsers}
         />
       </div>
     </div>
