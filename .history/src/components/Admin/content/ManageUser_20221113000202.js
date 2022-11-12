@@ -89,7 +89,6 @@ const ManageUser = () => {
             fetchListUsersWithPaginate={fetchListUsersWithPaginate}
             pageCount={pageCount}
             CurrentPage={CurrentPage}
-            setCurrentPage={setCurrentPage}
           />
         </div>
         <ModalCreateUser
@@ -97,8 +96,6 @@ const ManageUser = () => {
           setShow={setShowModalCreateUser}
           fetchListUsers={fetchListUsers}
           fetchListUsersWithPaginate={fetchListUsersWithPaginate}
-          CurrentPage={CurrentPage}
-          setCurrentPage={setCurrentPage}
         />
         <ModalUpdateUser
           show={showModalUpdateUser}
@@ -107,8 +104,6 @@ const ManageUser = () => {
           fetchListUsers={fetchListUsers}
           resetUpdateData={resetUpdateData}
           fetchListUsersWithPaginate={fetchListUsersWithPaginate}
-          CurrentPage={CurrentPage}
-          setCurrentPage={setCurrentPage}
         />
         <ModalDeleteUser
           show={showModalDeleteUser}
@@ -116,8 +111,6 @@ const ManageUser = () => {
           dataDelete={dataDelete}
           fetchListUsers={fetchListUsers}
           fetchListUsersWithPaginate={fetchListUsersWithPaginate}
-          CurrentPage={CurrentPage}
-          setCurrentPage={setCurrentPage}
         />
       </div>
     </div>

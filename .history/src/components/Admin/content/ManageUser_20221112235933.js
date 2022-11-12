@@ -16,7 +16,6 @@ import { Tab } from "react-bootstrap";
 const ManageUser = () => {
   const LIMIT_USER = 6;
   const [pageCount, setPageCount] = useState(0);
-  const [CurrentPage, setCurrentPage] = useState(1);
   const [showModalCreateUser, setShowModalCreateUser] = useState(false);
   const [showModalUpdateUser, setShowModalUpdateUser] = useState(false);
   const [dataUpdate, setDataUpdate] = useState({});
@@ -88,17 +87,13 @@ const ManageUser = () => {
             handleClickBtnDeleteUser={handleClickBtnDeleteUser}
             fetchListUsersWithPaginate={fetchListUsersWithPaginate}
             pageCount={pageCount}
-            CurrentPage={CurrentPage}
-            setCurrentPage={setCurrentPage}
           />
         </div>
         <ModalCreateUser
           show={showModalCreateUser}
           setShow={setShowModalCreateUser}
           fetchListUsers={fetchListUsers}
-          fetchListUsersWithPaginate={fetchListUsersWithPaginate}
-          CurrentPage={CurrentPage}
-          setCurrentPage={setCurrentPage}
+          fetchListUsersWithPaginate
         />
         <ModalUpdateUser
           show={showModalUpdateUser}
@@ -106,18 +101,12 @@ const ManageUser = () => {
           dataUpdate={dataUpdate}
           fetchListUsers={fetchListUsers}
           resetUpdateData={resetUpdateData}
-          fetchListUsersWithPaginate={fetchListUsersWithPaginate}
-          CurrentPage={CurrentPage}
-          setCurrentPage={setCurrentPage}
         />
         <ModalDeleteUser
           show={showModalDeleteUser}
           setShow={setShowModalDeleteUser}
           dataDelete={dataDelete}
           fetchListUsers={fetchListUsers}
-          fetchListUsersWithPaginate={fetchListUsersWithPaginate}
-          CurrentPage={CurrentPage}
-          setCurrentPage={setCurrentPage}
         />
       </div>
     </div>
