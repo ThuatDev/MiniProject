@@ -14,7 +14,7 @@ import TableUserPaginate from "./TableUserPaginate";
 import { Tab } from "react-bootstrap";
 
 const ManageUser = () => {
-  const LIMIT_USER = 6;
+  const LIMIT_USER = 1;
   const [pageCount, setPageCount] = useState(0);
   const [showModalCreateUser, setShowModalCreateUser] = useState(false);
   const [showModalUpdateUser, setShowModalUpdateUser] = useState(false);

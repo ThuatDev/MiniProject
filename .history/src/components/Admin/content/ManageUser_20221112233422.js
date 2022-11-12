@@ -39,7 +39,7 @@ const ManageUser = () => {
     if (res.EC === 0) {
       console.log(res.DT);
       setListUsers(res.DT.users);
-      setPageCount(res.DT.totalPages);
+      setPageCount(res.DT.totalPage);
     }
   };
   const handleClickBtnUpdateUser = (user) => {

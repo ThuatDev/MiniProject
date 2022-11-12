@@ -4,10 +4,7 @@ import { FcPlus } from "react-icons/fc";
 
 import TableUser from "./TableUser";
 import { useState, useEffect } from "react";
-import {
-  getAllUsers,
-  getUserWithPaginate,
-} from "../../../services/apiServices";
+import { getAllUsers } from "../../../services/apiServices";
 import ModalUpdateUser from "./ModalUpdateUser";
 import ModalDeleteUser from "./ModalDeleteUser";
 import TableUserPaginate from "./TableUserPaginate";
@@ -15,7 +12,6 @@ import { Tab } from "react-bootstrap";
 
 const ManageUser = () => {
   const LIMIT_USER = 6;
-  const [pageCount, setPageCount] = useState(0);
   const [showModalCreateUser, setShowModalCreateUser] = useState(false);
   const [showModalUpdateUser, setShowModalUpdateUser] = useState(false);
   const [dataUpdate, setDataUpdate] = useState({});
@@ -24,8 +20,7 @@ const ManageUser = () => {
   const [listUsers, setListUsers] = useState([]);
 
   useEffect(() => {
-    // fetchListUsers();
-    fetchListUsersWithPaginate(1);
+    fetchListUsers();
   }, []);
 
   const fetchListUsers = async () => {
@@ -35,11 +30,9 @@ const ManageUser = () => {
     }
   };
   const fetchListUsersWithPaginate = async (page) => {
-    let res = await getUserWithPaginate(page, LIMIT_USER);
+    let res = await getAllUsers();
     if (res.EC === 0) {
-      console.log(res.DT);
-      setListUsers(res.DT.users);
-      setPageCount(res.DT.totalPages);
+      setListUsers(res.DT);
     }
   };
   const handleClickBtnUpdateUser = (user) => {
@@ -85,8 +78,6 @@ const ManageUser = () => {
             listUsers={listUsers}
             handleClickBtnUpdateUser={handleClickBtnUpdateUser}
             handleClickBtnDeleteUser={handleClickBtnDeleteUser}
-            fetchListUsersWithPaginate={fetchListUsersWithPaginate}
-            pageCount={pageCount}
           />
         </div>
         <ModalCreateUser

@@ -24,7 +24,7 @@ const deleteUser = (userId) => {
   return axios.delete("/api/v1/participant", { data: { id: userId } });
 };
 const getUserWithPaginate = (page, limit) => {
-  return axios.get(`/api/v1/participant?page=${page}&limit=${limit}`);
+  return axios.delete(`/api/v1/participant?page=${page}&limit=${limit}`);
 };
 export {
   postCreateNewUser,
