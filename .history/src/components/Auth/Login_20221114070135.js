@@ -33,7 +33,7 @@ const Login = (props) => {
             className="form-control"
             id=""
             aria-describedby="helpId"
-            placeholder="At least 8 characters"
+            placeholder=""
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />

@@ -21,7 +21,7 @@ const Login = (props) => {
             className="form-control"
             id=""
             aria-describedby="helpId"
-            placeholder="bruce@wayne.com"
+            placeholder=""
             value={email}
             onChange={(event) => setEmail(event.target.value)}
           />
@@ -33,7 +33,7 @@ const Login = (props) => {
             className="form-control"
             id=""
             aria-describedby="helpId"
-            placeholder="At least 8 characters"
+            placeholder=""
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
