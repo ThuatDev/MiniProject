@@ -59,7 +59,4 @@ export {
   deleteUser,
   getUserWithPaginate,
   postLogin,
-  postRegister,
-  postForgotPassword,
-  postResetPassword,
 };

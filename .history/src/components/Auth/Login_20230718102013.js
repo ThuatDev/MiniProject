@@ -70,8 +70,8 @@ const Login = (props) => {
         </div>
         <div className="text-center">
           <span className="back" onClick={() => handleBack()}>
-            &#60;&#60;<i class="fa-sharp fa-solid fa-backward"></i>
-            Go To Homepage
+            &#60;&#60;<i class="fa-sharp fa-solid fa-backward"></i>Go To
+            Homepage
           </span>
         </div>
       </div>

@@ -9,9 +9,6 @@ const Header = () => {
   const handleLogin = () => {
     navigate("/login");
   };
-  const handleSignup = () => {
-    navigate("/signup");
-  };
   return (
     <Navbar bg="light" expand="lg">
       <Container>

@@ -33,33 +33,10 @@ const postLogin = (userEmail, userPassword) => {
 const getUserWithPaginate = (page, limit) => {
   return axios.get(`/api/v1/participant?page=${page}&limit=${limit}`);
 };
-const postRegister = (userEmail, userPassword, userName) => {
-  return axios.post(`/api/v1/register`, {
-    email: userEmail,
-    password: userPassword,
-    username: userName,
-  });
-};
-const postForgotPassword = (userEmail) => {
-  return axios.post(`/api/v1/forgot-password`, {
-    email: userEmail,
-  });
-};
-const postResetPassword = (userEmail, userPassword, token) => {
-  return axios.post(`/api/v1/reset-password`, {
-    email: userEmail,
-    password: userPassword,
-    token: token,
-  });
-};
 export {
   postCreateNewUser,
   getAllUsers,
   putUpdateUser,
   deleteUser,
   getUserWithPaginate,
-  postLogin,
-  postRegister,
-  postForgotPassword,
-  postResetPassword,
 };

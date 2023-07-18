@@ -10,7 +10,7 @@ const Header = () => {
     navigate("/login");
   };
   const handleSignup = () => {
-    navigate("/signup");
+    navigate("/register");
   };
   return (
     <Navbar bg="light" expand="lg">
