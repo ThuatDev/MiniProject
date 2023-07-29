@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,700;1,400&display=swap");
+.login-container {
+  .loader-icon {
+    // css cho nó xoay 360 độ
+    animation: spin 1s linear infinite;
+    -webkit-animation: spin 1s linear infinite;
+    -moz-animation: spin 1s linear infinite;
+    -o-animation: spin 1s linear infinite;
+    -ms-animation: spin 1s linear infinite;
+  }
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @-moz-keyframes spin {
+    from {
+      -moz-transform: rotate(0deg);
+    }
+    to {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  .header {
+    height: 45px;
+    text-align: right;
+    // border: 1px solid red;
+    padding: 5px 100px 0 100px;
+    button {
+      background-color: #fff;
+      border: 1px solid #000;
+      border-radius: 5px;
+      padding: 5px 10px;
+      font-family: "Sansita", sans-serif;
+      font-size: 1.2rem;
+      // font-weight: 700;
+      color: #000;
+      cursor: pointer;
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+  .title {
+    font-size: 25px;
+    padding: 20px 0;
+    text-align: center;
+    font-weight: 600;
+    font-family: "Sansita", sans-serif;
+  }
+  .welcome {
+    font-size: 20px;
+    padding: 10px 0;
+    text-align: center;
+    font-family: "Sansita", sans-serif;
+  }
+  .content-form {
+    input {
+      margin-bottom: 15px;
+      margin-top: 3px;
+    }
+    button {
+      width: 100%;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      margin: 20px 0;
+      color: white;
+      background: black;
+      &:disabled {
+        background: #ccc;
+        color: #000;
+        cursor: not-allowed;
+      }
+    }
+    .back {
+      cursor: pointer;
+    }
+  }
+}

@@ -23,23 +23,19 @@ const Login = (props) => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const [isLoading, setIsLoading] = useState(false);
 
   const handleBack = () => {
     navigate("/");
   };
   const handleLogin = async () => {
-    setIsLoading(true);
     let data = await postLogin(email, password);
     if (data && data.EC === 0) {
       dispatch(doLogin(data));
       toast.success(data.EM);
-      setIsLoading(false);
-      // navigate("/");
+      navigate("/");
     }
     if (data && +data.EC !== 0) {
       toast.error(data.EM);
-      setIsLoading(false);
       console.log("res", data);
     }
   };
@@ -87,9 +83,9 @@ const Login = (props) => {
           <button
             className="btn-submit"
             onClick={() => handleLogin()}
-            disabled={isLoading}
+            disabled={true}
           >
-            {isLoading === true && <ImSpinner9 className="loader-icon" />}
+            <ImSpinner9 className="loader-icon" />
             <span>login to ThuatDev</span>
           </button>
         </div>
