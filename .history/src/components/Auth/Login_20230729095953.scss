@@ -79,11 +79,6 @@
       margin: 20px 0;
       color: white;
       background: black;
-      &:disabled {
-        background: #ccc;
-        color: #000;
-        cursor: not-allowed;
-      }
     }
     .back {
       cursor: pointer;

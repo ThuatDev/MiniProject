@@ -1,36 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Sansita:ital,wght@0,700;1,400&display=swap");
 .login-container {
-  .loader-icon {
+  .loaderIcon {
     // css cho nó xoay 360 độ
     animation: spin 1s linear infinite;
     -webkit-animation: spin 1s linear infinite;
     -moz-animation: spin 1s linear infinite;
     -o-animation: spin 1s linear infinite;
     -ms-animation: spin 1s linear infinite;
-  }
-  @keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  @-webkit-keyframes spin {
-    from {
-      -webkit-transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  }
-  @-moz-keyframes spin {
-    from {
-      -moz-transform: rotate(0deg);
-    }
-    to {
-      -moz-transform: rotate(360deg);
-    }
   }
   .header {
     height: 45px;
@@ -79,11 +55,6 @@
       margin: 20px 0;
       color: white;
       background: black;
-      &:disabled {
-        background: #ccc;
-        color: #000;
-        cursor: not-allowed;
-      }
     }
     .back {
       cursor: pointer;

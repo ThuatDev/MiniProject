@@ -13,7 +13,6 @@ import {
   FaRegLaughWink,
   FaHeart,
 } from "react-icons/fa";
-import { ImSpinner9 } from "react-icons/im";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { FcPlus } from "react-icons/fc";
@@ -30,7 +29,7 @@ const Login = (props) => {
   const handleLogin = async () => {
     let data = await postLogin(email, password);
     if (data && data.EC === 0) {
-      dispatch(doLogin(data));
+      dispatch(doLogin(data.DT));
       toast.success(data.EM);
       navigate("/");
     }
@@ -80,13 +79,8 @@ const Login = (props) => {
         <span className="forgot-password">Forgot password ?</span>
 
         <div>
-          <button
-            className="btn-submit"
-            onClick={() => handleLogin()}
-            // disabled={true}
-          >
-            <ImSpinner9 className="loader-icon" />
-            <span>login to ThuatDev</span>
+          <button className="btn-submit" onClick={() => handleLogin()}>
+            login to ThuatDev
           </button>
         </div>
         <div className="text-center">

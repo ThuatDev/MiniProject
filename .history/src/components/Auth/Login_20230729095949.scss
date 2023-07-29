@@ -24,14 +24,7 @@
       -webkit-transform: rotate(360deg);
     }
   }
-  @-moz-keyframes spin {
-    from {
-      -moz-transform: rotate(0deg);
-    }
-    to {
-      -moz-transform: rotate(360deg);
-    }
-  }
+
   .header {
     height: 45px;
     text-align: right;
@@ -79,11 +72,6 @@
       margin: 20px 0;
       color: white;
       background: black;
-      &:disabled {
-        background: #ccc;
-        color: #000;
-        cursor: not-allowed;
-      }
     }
     .back {
       cursor: pointer;

@@ -13,7 +13,7 @@ import {
   FaRegLaughWink,
   FaHeart,
 } from "react-icons/fa";
-import { ImSpinner9 } from "react-icons/im";
+import { ImSpinner10 } from "react-icons/im";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { FcPlus } from "react-icons/fc";
@@ -80,12 +80,8 @@ const Login = (props) => {
         <span className="forgot-password">Forgot password ?</span>
 
         <div>
-          <button
-            className="btn-submit"
-            onClick={() => handleLogin()}
-            // disabled={true}
-          >
-            <ImSpinner9 className="loader-icon" />
+          <button className="btn-submit" onClick={() => handleLogin()}>
+            <ImSpinner10 className="loader-icon" />
             <span>login to ThuatDev</span>
           </button>
         </div>

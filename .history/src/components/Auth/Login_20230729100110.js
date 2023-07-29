@@ -80,11 +80,7 @@ const Login = (props) => {
         <span className="forgot-password">Forgot password ?</span>
 
         <div>
-          <button
-            className="btn-submit"
-            onClick={() => handleLogin()}
-            // disabled={true}
-          >
+          <button className="btn-submit" onClick={() => handleLogin()}>
             <ImSpinner9 className="loader-icon" />
             <span>login to ThuatDev</span>
           </button>

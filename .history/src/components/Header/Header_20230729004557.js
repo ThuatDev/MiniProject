@@ -3,12 +3,8 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import { NavLink, useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 const Header = () => {
-  const inAuthenticate = useSelector((state) => state.user.isAuthenticated);
-
-  const account = useSelector((state) => state.user.account);
   const navigate = useNavigate();
   const handleLogin = () => {
     navigate("/login");
@@ -17,6 +13,10 @@ const Header = () => {
     navigate("/signup");
   };
   return (
+      const inAuthenticate = useSelecter((state) => state.user.isAuthenticated);
+
+  const account = useSelecter((state) => state.user.account);
+
     <Navbar bg="light" expand="lg">
       <Container>
         {/* <Navbar.Brand href="">THUAT DEV</Navbar.Brand> */}
@@ -37,21 +37,12 @@ const Header = () => {
             </NavLink>
           </Nav>
           <Nav>
-            {inAuthenticate ? (
-              <NavDropdown title="Settings" id="basic-nav-dropdown">
-                <NavDropdown.Item>Profile</NavDropdown.Item>
-                <NavDropdown.Item>Log out</NavDropdown.Item>
-              </NavDropdown>
-            ) : (
-              <>
-                <button className="btn-login" onClick={() => handleLogin()}>
-                  Log in
-                </button>
-                <button className="btn-signup" onClick={() => handleSignup()}>
-                  Sign Up
-                </button>
-              </>
-            )}
+            <button className="btn-login" onClick={() => handleLogin()}>
+              Log in
+            </button>
+            <button className="btn-signup" onClick={() => handleSignup()}>
+              Sign Up
+            </button>
 
             {/* <NavDropdown title="Settings" id="basic-nav-dropdown">
               <NavDropdown.Item>Login</NavDropdown.Item>

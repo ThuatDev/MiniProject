@@ -83,7 +83,7 @@ const Login = (props) => {
           <button
             className="btn-submit"
             onClick={() => handleLogin()}
-            // disabled={true}
+            disabled={true}
           >
             <ImSpinner9 className="loader-icon" />
             <span>login to ThuatDev</span>

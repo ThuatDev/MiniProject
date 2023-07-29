@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { postLogin } from "../../services/apiServices";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThinkPeaks } from "@fortawesome/free-brands-svg-icons";
-import { useDispatch, useSelector } from "react-redux";
 import {
   FaTachometerAlt,
   FaGem,
@@ -13,24 +12,19 @@ import {
   FaRegLaughWink,
   FaHeart,
 } from "react-icons/fa";
-import { ImSpinner9 } from "react-icons/im";
 import axios from "axios";
 import { toast } from "react-toastify";
 import { FcPlus } from "react-icons/fc";
-import { doLogin } from "../../redux/reducer/userAction";
 const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-
   const handleBack = () => {
     navigate("/");
   };
   const handleLogin = async () => {
     let data = await postLogin(email, password);
     if (data && data.EC === 0) {
-      dispatch(doLogin(data));
       toast.success(data.EM);
       navigate("/");
     }
@@ -80,18 +74,13 @@ const Login = (props) => {
         <span className="forgot-password">Forgot password ?</span>
 
         <div>
-          <button
-            className="btn-submit"
-            onClick={() => handleLogin()}
-            // disabled={true}
-          >
-            <ImSpinner9 className="loader-icon" />
-            <span>login to ThuatDev</span>
+          <button className="btn-submit" onClick={() => handleLogin()}>
+            login to ThuatDev
           </button>
         </div>
         <div className="text-center">
           <span className="back" onClick={() => handleBack()}>
-            Go To Homepage
+<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 32C46.3 32 32 46.3 32 64V304v48 80c0 26.5 21.5 48 48 48H496c26.5 0 48-21.5 48-48V304 152.2c0-18.2-19.4-29.7-35.4-21.1L352 215.4V152.2c0-18.2-19.4-29.7-35.4-21.1L160 215.4V64c0-17.7-14.3-32-32-32H64z"/></svg>            Go To Homepage
           </span>
         </div>
       </div>

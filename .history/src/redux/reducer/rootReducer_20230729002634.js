@@ -4,7 +4,6 @@ import userReduce from "./userReduce";
 
 const rootReducer = combineReducers({
   counter: counterReducer,
-  user: userReduce,
 });
 
 export default rootReducer;

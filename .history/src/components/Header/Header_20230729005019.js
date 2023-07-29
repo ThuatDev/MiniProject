@@ -38,7 +38,11 @@ const Header = () => {
           </Nav>
           <Nav>
             {inAuthenticate ? (
-              <NavDropdown title="Settings" id="basic-nav-dropdown">
+              <NavDropdown
+                title={account.username}
+                id="basic-nav-dropdown"
+                className="nav-link"
+              >
                 <NavDropdown.Item>Profile</NavDropdown.Item>
                 <NavDropdown.Item>Log out</NavDropdown.Item>
               </NavDropdown>
