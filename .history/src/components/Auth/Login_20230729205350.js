@@ -15,7 +15,7 @@ import {
 } from "react-icons/fa";
 import { ImSpinner9 } from "react-icons/im";
 import axios from "axios";
-import { toast } from "react-toastify";
+
 import { FcPlus } from "react-icons/fc";
 import { doLogin } from "../../redux/reducer/userAction";
 const Login = (props) => {

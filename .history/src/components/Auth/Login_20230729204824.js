@@ -2,50 +2,58 @@ import "./Login.scss";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { postLogin } from "../../services/apiServices";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThinkPeaks } from "@fortawesome/free-brands-svg-icons";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  FaTachometerAlt,
-  FaGem,
-  FaList,
-  FaGithub,
-  FaRegLaughWink,
-  FaHeart,
-} from "react-icons/fa";
-import { ImSpinner9 } from "react-icons/im";
-import axios from "axios";
 import { toast } from "react-toastify";
-import { FcPlus } from "react-icons/fc";
 import { doLogin } from "../../redux/reducer/userAction";
+
 const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(false);
+  const [isToastVisible, setIsToastVisible] = useState(false);
 
   const handleBack = () => {
     navigate("/");
   };
+
   const handleLogin = async () => {
     setIsLoading(true);
     let data = await postLogin(email, password);
     if (data && data.EC === 0) {
       dispatch(doLogin(data));
-      toast.success(data.EM);
+      if (!isToastVisible) {
+        toast.success(data.EM);
+        setIsToastVisible(true);
+      }
       setIsLoading(false);
       navigate("/");
     }
     if (data && +data.EC !== 0) {
-      toast.error(data.EM);
+      if (!isToastVisible) {
+        toast.error(data.EM);
+        setIsToastVisible(true);
+      }
       setIsLoading(false);
       console.log("res", data);
     }
   };
-  const handleSignup = () => {
-    navigate("/signup");
-  };
+
+  useEffect(() => {
+    return () => {
+      setIsToastVisible(false);
+    };
+  }, []);
+
+  return (
+    <div className="login-container">
+      {/* ... Rest of the component code ... */}
+    </div>
+  );
+};
+
+export default Login;
 
   return (
     <div className="login-container">

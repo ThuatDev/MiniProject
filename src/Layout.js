@@ -42,7 +42,6 @@ const Layout = (props) => {
         theme="light"
       />
       {/* Same as */}
-      <ToastContainer />
     </>
   );
 };
